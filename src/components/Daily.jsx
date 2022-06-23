@@ -15,7 +15,7 @@ const Daily = ({ daily = [] }) => {
         <div className="text-center pt-5  text-xl md:grid md:grid-cols-4 gap-5 mx-4">
           {daily.map((daily, index) => (
             <div key={index} className="flex flex-wrap justify-center ">
-              <div className="max-w-sm  rounded overflow-hidden shadow-lg my-2">
+              <div className="max-w-md   rounded overflow-hidden shadow-lg my-2  ">
                 <img
                   // style={{backgroundColor: color}}
                   className="w-full bg-black/80"

@@ -5,6 +5,7 @@ import Featured from "./components/Featured";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import News from "./components/News";
+import SpecialFeatured from "./components/SpecialFeatured";
 
 function App() {
   const newsUrl = "https://fortnite-api.com/v2/news";
@@ -14,7 +15,9 @@ function App() {
   const [daily, setDaily] = useState([]);
   const [featured, setFeatured] = useState([]);
   const [bundles, setBundles] = useState([]);
-  const [specialFeatured, setSpecialFeatureed] = useState([]);
+  const [specialFeatured, setSpecialFeatured] = useState([]);
+  const [vbucksIcon, setVbucksIcon] = useState([]);
+
 
   const fetchDaily = (url) => {
     fetch(url)
@@ -23,7 +26,9 @@ function App() {
         setDaily(data.data.daily.entries);
         setFeatured(data.data.featured.entries);
         setBundles(data.data.featured.entries);
-        console.log(data.data.specialFeatured + "hola soy sf");
+        setSpecialFeatured(data.data.specialFeatured.entries)
+        setVbucksIcon(data.data.vbuckIcon);
+        // console.log(data.data.specialFeatured.entries );
       })
       .catch((err) => console.log(err));
   };
@@ -52,6 +57,9 @@ function App() {
       <Daily daily={daily} />
       <Bundles bundles={bundles} />
       <Featured featured={featured} />
+      <SpecialFeatured specialFeatured={specialFeatured}
+       vbucksIcon={vbucksIcon}
+      />
 
       <Footer />
     </>

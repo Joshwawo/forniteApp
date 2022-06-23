@@ -10,32 +10,36 @@ const Bundles = ({ bundles }) => {
             ""
           ) : (
             <div key={index} className="flex flex-wrap justify-center ">
-              <div class=" max-w-xs rounded overflow-hidden shadow-lg my-2">
+              <div className=" max-w-xs rounded overflow-hidden shadow-lg my-2">
                 <img
-                  class="w-full"
+                  className="w-full"
                   src={bundles.bundle.image}
                   alt="Sunset in the mountains"
                 />
-                <div class="px-6 py-4">
-                  <div class="font-bold text-xl mb-2">
+                <div className="px-6 py-4">
+                  <div className="font-bold text-xl mb-2">
                     {bundles.bundle.name}
                   </div>
-                  <p class="text-grey-darker text-base font-semibold uppercase">
+                  <p className="text-grey-darker text-base font-semibold uppercase">
                     {bundles.bundle.info}
                   </p>
-                  <p class="text-grey-darker text-base py-4">
-                    <span className="font-semibold bg-gray-200 rounded-md py-1 px-1">All Items in this Bundle</span>
-                    {bundles.items.map((item) => (
-                      <p className="py-1 pt-2">{item.name}</p>
+                  <p className="text-grey-darker text-base py-4">
+                    <span className="font-semibold bg-gray-200 rounded-md py-1 px-1">
+                      All Items in this Bundle
+                    </span>
+                    {bundles.items.map((item, index) => (
+                      <p key={index} className="py-1 pt-2">
+                        {item.name}
+                      </p>
                     ))}
                   </p>
                 </div>
-                <div class="px-6 py-4">
-                  <span class="inline-block bg-grey-lighter rounded-full px-3 py-1 text-sm font-semibold text-grey-darker mr-2 bg-yellow-300">
+                <div className="px-6 py-4">
+                  <span className="inline-block bg-grey-lighter rounded-full px-3 py-1 text-sm font-semibold text-grey-darker mr-2 bg-yellow-300">
                     Price: {bundles.banner.value}
                   </span>
-                  <span class="inline-block bg-grey-lighter rounded-full px-3 py-1 text-sm font-semibold text-grey-darker mr-2"></span>
-                  <span class="inline-block bg-grey-lighter rounded-full px-3 py-1 text-sm font-semibold text-grey-darker"></span>
+                  <span className="inline-block bg-grey-lighter rounded-full px-3 py-1 text-sm font-semibold text-grey-darker mr-2"></span>
+                  <span className="inline-block bg-grey-lighter rounded-full px-3 py-1 text-sm font-semibold text-grey-darker"></span>
                 </div>
               </div>
             </div>

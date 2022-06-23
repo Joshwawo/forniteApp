@@ -23,32 +23,40 @@ const Featured = ({ featured = [] }) => {
         {/* <img src="https://cdn.fortnite-api.com/news/v2/2817aa1aa08f6d9dd62b59877caecaa9a219975a.gif" alt="" /> */}
         {featured.map((featured, index) => (
           <div key={index} className="flex flex-wrap justify-center ">
-            <div class=" max-w-sm rounded overflow-hidden shadow-lg my-2">
+            <div className=" max-w-sm rounded overflow-hidden shadow-lg my-2">
               <img
-                class="w-full bg-black/80"
+                className="w-full bg-black/80"
                 src={featured.items[0].images.featured}
                 alt="Sunset in the mountains"
               />
 
-              <div class="px-6 py-4">
-                <div class="font-bold text-xl mb-2">
+              <div className="px-6 py-4">
+                <div className="font-bold text-xl mb-2">
                   {featured.items[0].name}
                 </div>
-                <p class="text-grey-darker text-base">
+                <p className="text-grey-darker text-base">
                   {featured.items[0].type.displayValue}
                 </p>
               </div>
-              <div class="px-6 py-4">
-                <span class=" inline-block bg-grey-lighter rounded-full px-3 py-1 text-sm font-semibold text-grey-darker mr-2">
+              <div className="px-6 py-4">
+                <span className=" inline-block bg-grey-lighter rounded-full px-3 py-1 text-sm font-semibold text-grey-darker mr-2">
                   <span className="font-bold"> Price:</span>{" "}
                   {featured.finalPrice} V-Bucks
                 </span>
 
-                <span class=" inline-block bg-grey-lighter rounded-full px-3 py-1 text-sm font-semibold text-grey-darker mr-2">
+                <span className=" inline-block bg-grey-lighter rounded-full px-3 py-1 text-sm font-semibold text-grey-darker mr-2">
                   <span className="font-bold"> Rarity:</span>{" "}
                   {featured.items[0].rarity.displayValue == "Epic" ? (
                     <span className="text-purple-500">Epic</span>
-                  ) : featured.items[0].rarity.displayValue == "Rare" ? <span className="text-blue-500"> Rare</span> : featured.items[0].rarity.displayValue == "Uncommon" ? <span className="text-green-500 "> Uncommon</span> : featured.items[0].rarity.displayValue == "Icon Series" ? <span className="text-cyan-500">Icon Series</span> : console.log('No soy')}
+                  ) : featured.items[0].rarity.displayValue == "Rare" ? (
+                    <span className="text-blue-500"> Rare</span>
+                  ) : featured.items[0].rarity.displayValue == "Uncommon" ? (
+                    <span className="text-green-500 "> Uncommon</span>
+                  ) : featured.items[0].rarity.displayValue == "Icon Series" ? (
+                    <span className="text-cyan-500">Icon Series</span>
+                  ) : (
+                    ""
+                  )}
                 </span>
 
                 <span class=" inline-block bg-grey-lighter rounded-full px-3 py-1 text-sm font-semibold text-grey-darker">
@@ -56,7 +64,7 @@ const Featured = ({ featured = [] }) => {
                   {featured.giftable ? "Yes" : "No"}
                 </span>
                 <span class=" inline-block bg-grey-lighter rounded-full px-3 py-1 text-sm font-semibold text-grey-darker">
-                  <span className="font-bold"> Refundable:</span>{" "}
+                  <span className="font-bold bg-fuchsia-500"> Refundable: </span>{" "}
                   {featured.giftable ? "Yes" : "No"}
                 </span>
               </div>
