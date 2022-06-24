@@ -1,7 +1,8 @@
-const News = ({ news = [] }) => {
+const News = ({ news = [], stw=[]}) => {
   // console.log(news.map((motd) => motd.title));
-  // console.log(news);
   // console.log(news.map((item, index ) => console.log(item.websiteUrl)));
+  // console.log(stw.messages);
+  // console.log(stw.map((newi, index) =>console.log(newi)));
   
 
   return (
@@ -35,6 +36,41 @@ const News = ({ news = [] }) => {
           </div>
         ))}
       </div>
+
+     
+
+      <div id="news" className=" md:flex  gap-5 justify-center mt-10  ">
+
+      
+        {stw.map((messages, index) => (
+
+          <div key={index} className="flex flex-wrap justify-center ">
+            <div className=" max-w-xs rounded overflow-hidden shadow-lg my-2">
+              <img
+                className="w-full"
+                src={messages.image}
+                alt="Sunset in the mountains"
+              />
+              <div className="px-6 py-4">
+                <div className="font-bold text-xl mb-2">{messages.title}</div>
+                <p className="text-grey-darker text-base mb-5">{messages.body}</p>
+                
+              </div>
+              <div className="px-6 py-4">
+                <span className="inline-block bg-grey-lighter rounded-full px-3 py-1 text-sm font-semibold text-grey-darker mr-2">
+                  #{messages.adspace}
+                </span>
+                <span className="inline-block bg-grey-lighter rounded-full px-3 py-1 text-sm font-semibold text-grey-darker mr-2"></span>
+                <span className="inline-block bg-grey-lighter rounded-full px-3 py-1 text-sm font-semibold text-grey-darker"></span>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+      {/* Fin noticias 2 */}
+
+
+
     </div>
   );
 };

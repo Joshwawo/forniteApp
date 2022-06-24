@@ -12,12 +12,12 @@ function App() {
   const dailyUrl = "https://fortnite-api.com/v2/shop/br";
 
   const [news, setNews] = useState([]);
+  const [stw, setStw] = useState([]);
   const [daily, setDaily] = useState([]);
   const [featured, setFeatured] = useState([]);
   const [bundles, setBundles] = useState([]);
   const [specialFeatured, setSpecialFeatured] = useState([]);
   const [vbucksIcon, setVbucksIcon] = useState([]);
-
 
   const fetchDaily = (url) => {
     fetch(url)
@@ -26,9 +26,8 @@ function App() {
         setDaily(data.data.daily.entries);
         setFeatured(data.data.featured.entries);
         setBundles(data.data.featured.entries);
-        setSpecialFeatured(data.data.specialFeatured.entries)
+        setSpecialFeatured(data.data.specialFeatured.entries);
         setVbucksIcon(data.data.vbuckIcon);
-        // console.log(data.data.specialFeatured.entries );
       })
       .catch((err) => console.log(err));
   };
@@ -38,6 +37,8 @@ function App() {
       .then((respuesta) => respuesta.json())
       .then((data) => {
         setNews(data.data.br.motds);
+        // setStw(data.data.stw.messages);
+        setStw(data.data.stw.messages);
       })
       .catch((error) => console.log(error));
   };
@@ -53,12 +54,15 @@ function App() {
   return (
     <>
       <Navbar />
-      <News news={news} />
+      <News news={news} 
+       stw={stw}
+      />
       <Daily daily={daily} />
       <Bundles bundles={bundles} />
       <Featured featured={featured} />
-      <SpecialFeatured specialFeatured={specialFeatured}
-       vbucksIcon={vbucksIcon}
+      <SpecialFeatured
+        specialFeatured={specialFeatured}
+        vbucksIcon={vbucksIcon}
       />
 
       <Footer />

@@ -19,7 +19,7 @@ const Featured = ({ featured = [] }) => {
       <p className="text-center pt-20 pb-8  text-2xl uppercase">
         Special Featured Store
       </p>
-      <div id="news" className="md:grid md:grid-cols-4 gap-5  mx-4">
+      <div id="news" className="md:grid md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6  gap-5  mx-4">
         {/* <img src="https://cdn.fortnite-api.com/news/v2/2817aa1aa08f6d9dd62b59877caecaa9a219975a.gif" alt="" /> */}
         {featured.map((featured, index) => (
           <div key={index} className="flex flex-wrap justify-center ">
@@ -38,7 +38,7 @@ const Featured = ({ featured = [] }) => {
                   {featured.items[0].type.displayValue}
                 </p>
               </div>
-              <div className="px-6 py-4">
+              <div className="px-4 py-4">
                 <span className=" inline-block bg-grey-lighter rounded-full px-3 py-1 text-sm font-semibold text-grey-darker mr-2">
                   <span className="font-bold"> Price:</span>{" "}
                   {featured.finalPrice} V-Bucks
@@ -59,12 +59,12 @@ const Featured = ({ featured = [] }) => {
                   )}
                 </span>
 
-                <span class=" inline-block bg-grey-lighter rounded-full px-3 py-1 text-sm font-semibold text-grey-darker">
+                <span className=" inline-block bg-grey-lighter rounded-full px-3 py-1 text-sm font-semibold text-grey-darker">
                   <span className="font-bold"> Gittable:</span>{" "}
                   {featured.giftable ? "Yes" : "No"}
                 </span>
-                <span class=" inline-block bg-grey-lighter rounded-full px-3 py-1 text-sm font-semibold text-grey-darker">
-                  <span className="font-bold bg-fuchsia-500"> Refundable: </span>{" "}
+                <span className=" inline-block bg-grey-lighter rounded-full px-3 py-1 text-sm font-semibold text-grey-darker">
+                  <span className="font-bold "> Refundable: </span>{" "}
                   {featured.giftable ? "Yes" : "No"}
                 </span>
               </div>

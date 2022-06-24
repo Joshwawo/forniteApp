@@ -10,10 +10,7 @@ const SpecialFeatured = ({ specialFeatured = [], vbucksIcon }) => {
   //     );
   //   })
   // );
-  console.log(
-    specialFeatured[0].newDisplayAsset.materialInstances[0].images.Background
-  );
-
+  
 
   // const date4 = new Date();
   return (
@@ -35,7 +32,6 @@ const SpecialFeatured = ({ specialFeatured = [], vbucksIcon }) => {
                   src={motd.newDisplayAsset.materialInstances[0].images.Background}
                   alt="Sunset in the mountains"
                 />
-
                 <div className="px-6 py-4">
                   <div className="font-bold text-xl mb-2">
                     <p>{motd.items[0].name}</p>
@@ -66,14 +62,14 @@ const SpecialFeatured = ({ specialFeatured = [], vbucksIcon }) => {
                     {motd.items[0].type.displayValue}
                   </p>
 
-                  <p className="text-grey-darker text-base">
+                  <div className="text-grey-darker text-base">
                     <span className="font-bold">Includes:</span>
                     {motd.items.map((items, index) => (
-                      <div className=" flex">
-                        <span class=" py-4 inline-block bg-grey-lighter rounded-full   text-sm font-semibold text-grey-darker mr-2">
+                      <div key={index} className=" flex">
+                        <span className=" py-4 inline-block bg-grey-lighter rounded-full   text-sm font-semibold text-grey-darker ">
                           <p>
                             {items.name}
-                            <span key={index} className="font-bold">
+                            <span  className="font-bold">
                               {" "}
                             </span>{" "}
                             {items.rarity.displayValue == "Epic" ? (
@@ -102,11 +98,11 @@ const SpecialFeatured = ({ specialFeatured = [], vbucksIcon }) => {
                         {/* <p>Description: {items.description}</p> */}
                       </div>
                     ))}
-                  </p>
+                  </div>
                 </div>
 
-                <div class="px-6 py-4">
-                  <span class=" flex  bg-grey-lighter rounded-full  py-1  text-sm font-semibold text-grey-darker mr-2">
+                <div className="px-6 py-4">
+                  <span className=" flex  bg-grey-lighter rounded-full  py-1  text-sm font-semibold text-grey-darker mr-2">
                     <span className="font-bold py-2"> Price:</span>{" "}
                     <span className="py-2">
                       {" "}
@@ -130,11 +126,11 @@ const SpecialFeatured = ({ specialFeatured = [], vbucksIcon }) => {
                       ""
                     )}
                   </span> */}
-                  <span class=" inline-block bg-grey-lighter rounded-full  py-1 text-sm font-semibold text-grey-darker">
+                  <span className=" inline-block bg-grey-lighter rounded-full  py-1 text-sm font-semibold text-grey-darker">
                     <span className="font-bold"> Gittable: </span>{" "}
                     {motd.giftable ? "Yes" : "No"}
                   </span>{" "}
-                  <span class=" inline-block bg-grey-lighter rounded-full  py-1 text-sm font-semibold text-grey-darker">
+                  <span className=" inline-block bg-grey-lighter rounded-full  py-1 text-sm font-semibold text-grey-darker">
                     <span className="font-bold"> Refundable: </span>{" "}
                     {motd.giftable ? "Yes" : "No"}
                   </span>
