@@ -2,7 +2,7 @@ const Bundles = ({ bundles }) => {
   //   console.log(bundles);
   return (
     <div className=" ">
-      <p className="text-center pt-20 pb-8  text-2xl uppercase">Bundles</p>
+      <div className="text-center pt-20 pb-8  text-2xl uppercase"><p>bundles</p></div>
       <div id="news" className="md:flex gap-5 justify-center mx-4">
         {/* <img src="https://cdn.fortnite-api.com/news/v2/2817aa1aa08f6d9dd62b59877caecaa9a219975a.gif" alt="" /> */}
         {bundles.map((bundles, index) =>
@@ -17,9 +17,9 @@ const Bundles = ({ bundles }) => {
                   alt="Sunset in the mountains"
                 />
                 <div className="px-6 py-4">
-                  <div className="font-bold text-xl mb-2">
+                  <p className="font-bold text-xl mb-2">
                     {bundles.bundle.name}
-                  </div>
+                  </p>
                   <p className="text-grey-darker text-base font-semibold uppercase">
                     {bundles.bundle.info}
                   </p>

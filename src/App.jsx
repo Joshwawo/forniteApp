@@ -49,14 +49,15 @@ function App() {
 
   useEffect(() => {
     fetchDaily(dailyUrl);
-  }, []);
-
+  }, 
+  []
+  );
+  
+  //[setDaily, setFeatured, setBundles, setSpecialFeatured, setVbucksIcon]
   return (
     <>
       <Navbar />
-      <News news={news} 
-       stw={stw}
-      />
+      <News news={news} stw={stw} />
       <Daily daily={daily} />
       <Bundles bundles={bundles} />
       <Featured featured={featured} />
