@@ -4,6 +4,10 @@ const Daily = ({ daily = [] }) => {
   // console.log(daily[0].items[0].type);
   // console.log(daily[0].newDisplayAsset.materialInstances[0].colors.Background_Color_A);
   // console.log(daily);
+  console.log(daily)
+
+  daily.map((daily, index) => {console.log(daily.newDisplayAsset== null ? "" : daily.newDisplayAsset.materialInstances[0].images.Background)})
+  
   return (
     <div>
       <h3 id="daily" className="text-2xl text-center text-black py-10 uppercase">
@@ -17,10 +21,10 @@ const Daily = ({ daily = [] }) => {
               <div className="max-w-md   rounded overflow-hidden shadow-lg my-2  ">
                 <img
                   // style={{backgroundColor: color}}
+                  loading="lazy"
                   className="w-full bg-black/80"
                   src={
-                   daily.newDisplayAsset.materialInstances[0].images.Background
-                  }
+                   daily.newDisplayAsset == null ? "" : daily.newDisplayAsset.materialInstances[0].images.Background                 }
                   alt="Sunset in the mountains"
                 />
                 <div className="px-6 py-4">

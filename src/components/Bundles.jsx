@@ -2,7 +2,7 @@ const Bundles = ({ bundles }) => {
   //   console.log(bundles);
   return (
     <div className=" ">
-      <div className="text-center pt-20 pb-8  text-2xl uppercase"><p>bundles</p></div>
+      <p className="text-center pt-20 pb-8  text-2xl uppercase">bundles</p>
       <div id="news" className="md:flex gap-5 justify-center mx-4">
         {/* <img src="https://cdn.fortnite-api.com/news/v2/2817aa1aa08f6d9dd62b59877caecaa9a219975a.gif" alt="" /> */}
         {bundles.map((bundles, index) =>
@@ -23,7 +23,7 @@ const Bundles = ({ bundles }) => {
                   <p className="text-grey-darker text-base font-semibold uppercase">
                     {bundles.bundle.info}
                   </p>
-                  <p className="text-grey-darker text-base py-4">
+                  <div className="text-grey-darker text-base py-4">
                     <span className="font-semibold bg-gray-200 rounded-md py-1 px-1">
                       All Items in this Bundle
                     </span>
@@ -32,7 +32,7 @@ const Bundles = ({ bundles }) => {
                         {item.name}
                       </p>
                     ))}
-                  </p>
+                  </div>
                 </div>
                 <div className="px-6 py-4">
                   <span className="inline-block bg-grey-lighter rounded-full px-3 py-1 text-sm font-semibold text-grey-darker mr-2 bg-yellow-300">

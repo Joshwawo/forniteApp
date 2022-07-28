@@ -28,6 +28,7 @@ const Featured = ({ featured = [] }) => {
                 className="w-full bg-black/80"
                 src={featured.items[0].images.featured}
                 alt="Sunset in the mountains"
+                loading="lazy"
               />
 
               <div className="px-6 py-4">

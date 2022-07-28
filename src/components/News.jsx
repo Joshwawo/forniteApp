@@ -17,6 +17,7 @@ const News = ({ news = [], stw=[]}) => {
                 className="w-full"
                 src={motd.image}
                 alt="Sunset in the mountains"
+                loading="lazy"
               />
               <div className="px-6 py-4">
                 <div className="font-bold text-xl mb-2">{motd.title}</div>
@@ -50,6 +51,7 @@ const News = ({ news = [], stw=[]}) => {
                 className="w-full"
                 src={messages.image}
                 alt="Sunset in the mountains"
+                loading="lazy"
               />
               <div className="px-6 py-4">
                 <div className="font-bold text-xl mb-2">{messages.title}</div>

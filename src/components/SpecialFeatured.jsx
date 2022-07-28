@@ -31,6 +31,7 @@ const SpecialFeatured = ({ specialFeatured = [], vbucksIcon }) => {
                   className="w-full bg-black/80"
                   src={motd.newDisplayAsset.materialInstances[0].images.Background}
                   alt="Sunset in the mountains"
+                  loading="lazy"
                 />
                 <div className="px-6 py-4">
                   <div className="font-bold text-xl mb-2">
@@ -93,6 +94,7 @@ const SpecialFeatured = ({ specialFeatured = [], vbucksIcon }) => {
                           className="w-10 "
                           src={items.images.smallIcon}
                           alt="no"
+                          loading="lazy"
                         />
 
                         {/* <p>Description: {items.description}</p> */}
@@ -110,7 +112,7 @@ const SpecialFeatured = ({ specialFeatured = [], vbucksIcon }) => {
                       {""}
                       V-Bucks{" "}
                     </span>{" "}
-                    <img className="w-8 h-8" src={vbucksIcon} alt="" />
+                    <img className="w-8 h-8" src={vbucksIcon} alt="icon" loading="lazy" />
                   </span>
                   {/* <span class=" inline-block bg-grey-lighter rounded-full  py-1 text-sm font-semibold text-grey-darker mr-2">
                     <span className="font-bold"> Rarity:</span>{" "}
