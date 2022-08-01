@@ -1,3 +1,4 @@
+import Comparador from "./Comparador";
 
 const Daily = ({ daily = [] }) => {
   // console.log(color);
@@ -41,24 +42,7 @@ const Daily = ({ daily = [] }) => {
                   </span>
                   <span className="inline-block bg-grey-lighter rounded-full px-3 py-1 text-sm font-semibold text-grey-darker mr-2">
                     <span className="font-bold">Rarity:</span>{" "}
-                    {daily.items[0].rarity.displayValue == "Rare" ? (
-                      <span className="text-blue-400">Rare</span>
-                    ) : daily.items[0].rarity.displayValue ? (
-                      <span className="text-gray-500">Common</span>
-                    ) : (
-                      (daily.items[0].rarity.displayValue = "Uncommon" ? (
-                        <span className="text-green-400">Uncommon</span>
-                      ) : (
-                        (daily.items[0].rarity.displayValue = "Epic" ? (
-                          <span className="text-purple-500">Epic</span>
-                        ) : daily.items[0].rarity.displayValue ==
-                          "Legendary" ? (
-                          <span className="text-orange-500">Legendary</span>
-                        ) : (
-                          "Unkown"
-                        ))
-                      ))
-                    )}
+                   <Comparador>{daily.items[0].rarity.displayValue}</Comparador>
                   </span>
                   <span className="inline-block bg-grey-lighter rounded-full px-3 py-1 text-sm font-semibold text-grey-darker">
                     <span className="font-bold">Giftable:</span>

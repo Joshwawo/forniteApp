@@ -1,3 +1,5 @@
+import Comparador from "./Comparador";
+
 const SpecialFeatured = ({ specialFeatured = [], vbucksIcon }) => {
   // console.log(vbucksIcon);
   // console.log(specialFeatured[0].items[0]);
@@ -73,21 +75,7 @@ const SpecialFeatured = ({ specialFeatured = [], vbucksIcon }) => {
                             <span  className="font-bold">
                               {" "}
                             </span>{" "}
-                            {items.rarity.displayValue == "Epic" ? (
-                              <span className="text-purple-500">Epic</span>
-                            ) : items.rarity.displayValue == "Rare" ? (
-                              <span className="text-blue-500"> Rare</span>
-                            ) : items.rarity.displayValue == "Uncommon" ? (
-                              <span className="text-green-500 "> Uncommon</span>
-                            ) : items.rarity.displayValue == "Icon Series" ? (
-                              <span className="text-cyan-500">Icon Series</span>
-                            ) : items.rarity.displayValue == "MARVEL SERIES" ? (
-                              <span className="text-red-500">
-                                Marvel Series
-                              </span>
-                            ) : (
-                              ""
-                            )}
+                           <Comparador>{items.rarity.displayValue}</Comparador>
                           </p>
                         </span>
                         <img

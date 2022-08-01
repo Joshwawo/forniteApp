@@ -23,7 +23,7 @@ const News = ({ news = [], stw=[]}) => {
                 <div className="font-bold text-xl mb-2">{motd.title}</div>
                 <p className="text-grey-darker text-base mb-5">{motd.body}</p>
                 {
-                  motd.websiteUrl == undefined ? "" : <a className="font-semibold hover:text-green-500 up" href={motd.websiteUrl} >Read Complete...</a>
+                  motd.websiteUrl == undefined ? "" : <a className="font-semibold hover:text-green-500 up" target="_blank" href={motd.websiteUrl} >Read Complete...</a>
                 }
               </div>
               <div className="px-6 py-4">

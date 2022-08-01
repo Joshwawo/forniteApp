@@ -1,4 +1,5 @@
 import React from "react";
+import Comparador from "./Comparador";
 
 const Featured = ({ featured = [] }) => {
   // console.log(featured);
@@ -47,17 +48,7 @@ const Featured = ({ featured = [] }) => {
 
                 <span className=" inline-block bg-grey-lighter rounded-full px-3 py-1 text-sm font-semibold text-grey-darker mr-2">
                   <span className="font-bold"> Rarity:</span>{" "}
-                  {featured.items[0].rarity.displayValue == "Epic" ? (
-                    <span className="text-purple-500">Epic</span>
-                  ) : featured.items[0].rarity.displayValue == "Rare" ? (
-                    <span className="text-blue-500"> Rare</span>
-                  ) : featured.items[0].rarity.displayValue == "Uncommon" ? (
-                    <span className="text-green-500 "> Uncommon</span>
-                  ) : featured.items[0].rarity.displayValue == "Icon Series" ? (
-                    <span className="text-cyan-500">Icon Series</span>
-                  ) : (
-                    ""
-                  )}
+                <Comparador>{featured.items[0].rarity.displayValue}</Comparador>
                 </span>
 
                 <span className=" inline-block bg-grey-lighter rounded-full px-3 py-1 text-sm font-semibold text-grey-darker">
