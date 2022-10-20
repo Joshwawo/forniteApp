@@ -36,7 +36,7 @@ const Bundles = ({ bundles }) => {
                 </div>
                 <div className="px-6 py-4">
                   <span className="inline-block bg-grey-lighter rounded-full px-3 py-1 text-sm font-semibold text-grey-darker mr-2 bg-yellow-300">
-                    Price: {bundles.banner.value}
+                    Price: {bundles?.banner?.value.length > 1 ? bundles?.banner?.value : "no price" }
                   </span>
                   <span className="inline-block bg-grey-lighter rounded-full px-3 py-1 text-sm font-semibold text-grey-darker mr-2"></span>
                   <span className="inline-block bg-grey-lighter rounded-full px-3 py-1 text-sm font-semibold text-grey-darker"></span>

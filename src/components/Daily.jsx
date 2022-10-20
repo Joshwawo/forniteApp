@@ -1,13 +1,13 @@
-import Comparador from "./Comparador";
+import {Comparador} from "./Comparador";
 
 const Daily = ({ daily = [] }) => {
   // console.log(color);
   // console.log(daily[0].items[0].type);
   // console.log(daily[0].newDisplayAsset.materialInstances[0].colors.Background_Color_A);
   // console.log(daily);
-  console.log(daily)
+  // console.log(daily)
 
-  daily.map((daily, index) => {console.log(daily.newDisplayAsset== null ? "" : daily.newDisplayAsset.materialInstances[0].images.Background)})
+  // daily.map((daily, index) => {console.log(daily.newDisplayAsset== null ? "" : daily.newDisplayAsset.materialInstances[0].images.Background)})
   
   return (
     <div>

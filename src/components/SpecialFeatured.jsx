@@ -1,4 +1,4 @@
-import Comparador from "./Comparador";
+import {Comparador, ComparadorSubtitle} from './Comparador'
 
 const SpecialFeatured = ({ specialFeatured = [], vbucksIcon }) => {
   // console.log(vbucksIcon);
@@ -22,7 +22,7 @@ const SpecialFeatured = ({ specialFeatured = [], vbucksIcon }) => {
       </p>
       <div
         id="news"
-        className="md:grid md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6  gap-5  mx-4"
+        className="md:grid md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6  gap-5  mx-4"
       >
         {specialFeatured.map((motd, index) =>
           motd.bundle == null ? (
@@ -44,9 +44,7 @@ const SpecialFeatured = ({ specialFeatured = [], vbucksIcon }) => {
                     {motd.items[0].series == null ? (
                       ""
                     ) : (
-                      <span className="font-semibold text-red-500">
-                        {motd.items[0].series.value}
-                      </span>
+                      <ComparadorSubtitle>{motd.items[0].series.value}</ComparadorSubtitle>
                     )}
                   </span>
 

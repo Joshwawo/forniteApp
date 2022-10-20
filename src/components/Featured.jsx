@@ -1,5 +1,5 @@
 import React from "react";
-import Comparador from "./Comparador";
+import {Comparador} from "./Comparador";
 
 const Featured = ({ featured = [] }) => {
   // console.log(featured);
